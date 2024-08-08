@@ -61,6 +61,13 @@
     align-items: start;
     padding: 50px;
 }
+.contents h1{
+    font-size: 9vw;
+    color: white;
+    width: 100vw;
+    text-align: center;
+    text-transform: uppercase;
+}
 .gifs{
     width: 100%;
     border: 2px solid purple;

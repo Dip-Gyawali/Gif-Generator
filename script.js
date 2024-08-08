@@ -2,7 +2,7 @@ let btn = document.querySelector('.btn');
 let giftext = document.querySelector('.giftext');
 let content = document.querySelector('.contents');
 
-let apiKey = "";
+let apiKey = "Your Api Key Here";
 
 btn.onclick = getGifs;
 
@@ -30,17 +30,18 @@ async function getGifs() {
         let sourceBtn = document.createElement("button");
         sourceBtn.innerHTML="Source Of GIF";
 
-
-        sourceBtn.
-        sourceBtn.value = element.source;
-
-
+        //this is added so that the sorce of each gif can be opened on new tab using window.open when the button is clicked
+        sourceBtn.onclick = function(){
+           window.open(
+                element.source_post_url,
+                "_blank"
+           );
+        }
         div.appendChild(image);
         div.appendChild(sourceBtn);
         content.appendChild(div);
 
-        console.log(element);
-
+        //console.log(element);
 
         giftext.value='';
     })
