@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 .main{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-color: #252222;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .nav-sec{
     display: flex;
@@ -61,4 +63,25 @@
 }
 .gifs{
     width: 100%;
+    border: 2px solid purple;
+    box-shadow: 2px 2px 20px purple;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.gifs img{
+    height: 250px;
+    width: 80%;
+}
+.gifs button{
+    margin-top: 10px;
+    font-size: 1vw;
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(8, 224, 8);
+    cursor: pointer;
 }

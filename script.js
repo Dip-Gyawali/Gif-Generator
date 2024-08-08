@@ -2,12 +2,13 @@ let btn = document.querySelector('.btn');
 let giftext = document.querySelector('.giftext');
 let content = document.querySelector('.contents');
 
-let apiKey = "0RFsstUVnTxxQvkGHMJD8kCPQSmux1oD";
+let apiKey = "";
 
 btn.onclick = getGifs;
 
 async function getGifs() {
     //To get the user input in textbox and save in a variable
+    content.innerHTML="";
     let searchValue = giftext.value;
 
     //api url which consist of apikey and search value
@@ -24,8 +25,23 @@ async function getGifs() {
         div.classList.add("gifs");
 
         let image = document.createElement("img");
+        image.src = element.images.downsized_medium.url;
+
+        let sourceBtn = document.createElement("button");
+        sourceBtn.innerHTML="Source Of GIF";
+
+
+        sourceBtn.
+        sourceBtn.value = element.source;
+
+
+        div.appendChild(image);
+        div.appendChild(sourceBtn);
+        content.appendChild(div);
+
         console.log(element);
 
-        
+
+        giftext.value='';
     })
 }
