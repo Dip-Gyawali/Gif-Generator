@@ -2,7 +2,7 @@ let btn = document.querySelector('.btn');
 let giftext = document.querySelector('.giftext');
 let content = document.querySelector('.contents');
 
-let apiKey = "0RFsstUVnTxxQvkGHMJD8kCPQSmux1oD";
+let apiKey = "Your Api Key";
 
 btn.onclick = getGifs;
 
